@@ -1,11 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="Hello, AIS 12"/>
-</f:view>
+<h:head>
+    <title>НҮҮР ХУУДАС</title>
+    <link rel="icon" type="image/png" href="img/ais_tab_logo.png"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext"/>
+</h:head>
+<h:body>
+    <header class="site-header navbar-fixed-top">
+        <nav class="navbar navbar-default">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="text">Хэрэглэгчдэд | Ажилчдад</p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <h:outputLink> <h:outputText value="EN"/> </h:outputLink>
+                            <h:outputText value=" | "/>
+                            <h:outputLink> <h:outputText value="MN"/> </h:outputLink>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <i class="fa fa-bars"/>
+                </button>
+                <a href="#" class="navbar-brand">
+                    <img src="img/logo.png" alt="Post"/>
+                </a>
+                <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                    <ul class="nav navbar-nav main-navbar-nav">
+                        <li class="active"><h:link value="НҮҮР ХУУДАС" outcome="index"/></li>
+                        <li class="dropdown">
+                            <h:link class="dropdown-toggle" data-toggle="dropdown" value="БИДНИЙ ТУХАЙ">
+                                <span class="caret"/>
+                            </h:link>
+                            <ul class="dropdown-menu">
+                                <li><h:link value="ТОВЧ ТАНИЛЦУУЛГА" outcome="index"/></li>
+                                <li><h:link value="БҮТЭЦ" outcome="index"/></li>
+                                <li><h:link value="ЗОРИЛГО, ЗОРИЛТ" outcome="index"/></li>
+                                <li><h:link value="ТҮҮХ" outcome="index"/></li>
+                                <li><h:link value="ТӨЛӨВЛӨГӨӨ ТАЙЛАН" outcome="index"/></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <h:link class="dropdown-toggle" data-toggle="dropdown" value="AIP">
+                                <span class="caret"/>
+                            </h:link>
+                            <ul class="dropdown-menu">
+                                <li><h:link value="МОНГОЛ УЛСЫН AIP / AVITECH /" outcome="index"/></li>
+                                <li><h:link value="АЕРОДРОМЫН МЭДЭЭЛЭЛ" outcome="index"/></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <h:link class="dropdown-toggle" data-toggle="dropdown" value="NOTAM">
+                                <span class="caret"/>
+                            </h:link>
+                            <ul class="dropdown-menu">
+                                <li><h:link value="NOTAM-УУД" outcome="index"/></li>
+                                <li><h:link value="ШУУРХАЙ МЭДЭЭ" outcome="index"/></li>
+                                <li><h:link value="ЦАСНЫ NOTAM" outcome="index"/></li>
+                                <li><h:link value="LIST OF VALID NOTAM" outcome="index"/></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <h:link class="dropdown-toggle" data-toggle="dropdown" value="НИСЛЭГИЙН ӨМНӨХ ҮЙЛЧИЛГЭЭ">
+                                <span class="caret"/>
+                            </h:link>
+                            <ul class="dropdown-menu">
+                                <li><h:link value="НИСЛЭГИЙН ӨМНӨХ МЭДЭЭЛЛИЙН ТОВХИМОЛ" outcome="index"/></li>
+                                <li><h:link value="ГАДААД ОРНУУДЫН ӨӨРЧЛӨЛТ" outcome="index"/></li>
+                                <li><h:link value="АГААРЫН НАВИГАЦИЙН БЭЛЭН БАЙДЛЫН МЭДЭЭ" outcome="index"/></li>
+                                <li><h:link value="ШУВУУДЫН МӨРГӨЛТИЙН МЭДЭЭЛЭЛ" outcome="index"/></li>
+                                <li><h:link value="НИСЛЭГИЙН ДАРААХ ИЛТГЭХ ХУУДАС" outcome="index"/></li>
+                            </ul>
+                        </li>
+                        <li><h:link value="МЭДЭЭ" outcome="index"/></li>
+                        <li><h:link value="ХОЛБОО БАРИХ" outcome="index"/></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="site-main">
+        <section class="hero_area">
+            <div id="topBanner" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-slide-to="0" class="active"/>
+                    <li data-slide-to="1"/>
+                    <li data-slide-to="2"/>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner banner_img">
+                    <div class="item active">
+                        <img src="img/1.jpg"/>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/2.jpg"/>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/3.jpg"/>
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#topBanner" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"/>
+                </a>
+                <a class="right carousel-control" href="#topBanner" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"/>
+                </a>
+            </div>
+            <!--<div class="hero_content">-->
+            <!--<div class="container">-->
+            <!--<div class="row">-->
+            <!--<div class="col-sm-12">-->
+            <!--<h1>COMPANY NAME</h1>-->
+            <!--<h2>Donec Elit Non Porta Gravida Eget Metus</h2>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+        </section>
+        <section class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <i class="fa fa-cogs"/>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">AIP</h4>
+                                <p>Lorem ipsum dolor amet,consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <i class="fa fa-user-md"/>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">NOTAM</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <i class="fa fa-stethoscope"/>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">ШУУРХАЙ МЭДЭЭ</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <i class="fa fa-graduation-cap"/>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">АГААРЫН НАВИГАЦИЙН МЭДЭЭ</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <i class="fa fa-file-text-o"/>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">ГАДААД ОРНУУДЫН ЧУХАЛ ӨӨРЧЛӨЛТ</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <i class="fa fa-heartbeat"/>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">НИСЛЭГИЙН ӨМНӨХ МЭДЭЭЛЛИЙН ТОВХИМОЛ</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="boxes_area">
+            <h2 class="section-title">SERVICES</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <h3>AIRAC КАЛЕНДАРЬ</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            <i class="fa fa-exclamation-triangle"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <h3>БҮТЭЭГДЭХҮҮНИЙ ЧАНАР</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            <i class="fa fa-cogs"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="box">
+                            <h3>ЗАРЛАГДСАН NOTAM-УУД</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            <i class="fa fa-clipboard"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="home-area">
+            <div class="home_content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12"><h2 class="sub_title">LATEST NEWS</h2></div>
+                        <div class="home_list">
+                            <ul>
+                                <li class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="thumbnail">
+                                        <img src="img/h1.jpeg" alt="Post"/>
+                                        <div class="caption">
+                                            <h3><a href="#">Post Title</a></h3>
+                                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                            <a href="#" class="btn btn-link">More</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="thumbnail">
+                                        <img src="img/h2.jpg" class="img-responsive" alt="Post"/>
+                                        <div class="caption">
+                                            <h3><a href="#">Post Title</a></h3>
+                                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                            <a href="#" class="btn btn-link">More</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="thumbnail">
+                                        <img src="img/h3.jpeg" class="img-responsive" alt="Post"/>
+                                        <div class="caption">
+                                            <h3><a href="#">Post Title</a></h3>
+                                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                            <a href="#" class="btn btn-link">More</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="thumbnail">
+                                        <img src="img/h4.jpeg" class="img-responsive" alt="Post"/>
+                                        <div class="caption">
+                                            <h3><a href="#">Post Title</a></h3>
+                                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                            <a href="#" class="btn btn-link">More</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 fbox">
+                    <h4><h:outputText value="БИДНИЙ ТУХАЙ"/></h4>
+                    <p class="text">
+                        <h:outputText
+                                value="Монгол улс 1989 онд олон улсын иргэний агаарын тээврийн тухай Чикагогийн Конвенцийн эгнээнд нэгдэн орсоноор олон улсын иргэний нисэхийн байгууллагуудын өмнө нислэгийн аюулгvй байдлыг хангах тухай 'Гишүүн улс нь өөрийн нутаг дэвсгэрт нисэхийн өгөгдөл/нисэхийн мэдээллийн үйлчилгээ үзүүлэх' үүргийг хүлээдэг."/>
+                    </p>
+                    <ul class="list-inline">
+                        <li><a href="#"><i class="fa fa-facebook"/></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 fbox">
+                    <h4><h:outputText value="ХОЛБОО БАРИХ"/></h4>
+                    <p class="text">
+                        <h:outputText value="Монгол Улс, Улаанбаатар 17120, Хан-Уул дүүрэг, Чингис хаан ОУБ"/>
+                    </p>
+                    <p class="text">
+                        <span class="glyphicon glyphicon-earphone"/>
+                        <h:outputText value=" Албаны дарга +976-11-283131"/>
+                    </p>
+                    <p class="text">
+                        <span class="glyphicon glyphicon-earphone"/>
+                        <h:outputText value=" Захиргааны ажилтан: +976-11-283126"/>
+                    </p>
+                    <p class="text">
+                        <span class="glyphicon glyphicon-envelope"/>
+                        <h:outputText value=" ais@mcaa.gov.mn"/>
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 fbox">
+                    <h4><h:outputText value="ЦАГ UTC"/></h4>
+                    <ul class="big">
+                        <li><a href="#" title="">Title One</a></li>
+                        <li><a href="#" title="">Title Two</a></li>
+                        <li><a href="#" title="">Title Three</a></li>
+                        <li><a href="#" title="">Title Four</a></li>
+                        <li><a href="#" title="">Title Five</a></li>
+                        <li><a href="#" title="">Title Six</a></li>
+                        <li><a href="#" title="">Title Seven</a></li>
+                        <li><a href="#" title="">Title Eight</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"/>
+    <script src="js/bootstrap.min.js"/>
+    <script type="text/javascript">
+        $('.carousel[data-type="multi"] .item').each(function () {
+            var next = $(this).next();
+            if (!next.length) next = $(this).siblings(':first');
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i &lt; 4; i++) {
+                next = next.next();
+                if (!next.length) next = $(this).siblings(':first');
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+</h:body>
 </html>
